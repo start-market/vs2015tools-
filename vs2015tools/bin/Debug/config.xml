@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<config>
+  <item name="数据库连接" mode="sql" conn="server=192.168.100.5;database=DB_RSDA;uid=sa;pwd='12QWEasd!@'"></item>
+  <item name="原图路径" path="\\192.168.100.5\afp\AFPsystem_RSDA\AFP_files"></item>
+  <item name="程序跑过图路径" path="\\192.168.100.5\afp\AFPsystem_RSDA\AFP_files2"></item>
+  <!--领取新盒 领取page表-->
+  <item name="领取方式" type="领取新盒" sql="select id,agency,iyear,box,keyid,pagename,list_XTBJ,isRotate,sCut,finishCheck,markTemp from afp_Archive_Page where markTemp not in (1,2) and markTemp is not null  and list_XTBJ not in(3) and (scut='' or scut is null) order by markTemp,id asc"></item>
+</config>
